@@ -1,1 +1,13 @@
 <h1>WELCOME TO ROCK PAPER SCISSORS</h1>
+
+<p>You played: <%=@game.play%></p>
+
+<p>Computer Played: <%=@game.computer_play%></p>
+
+<% if @game.tied? %>
+<%= "tied!" %>
+<% elsif @game.lost? %>
+<%= "lost." %>
+<% else %>
+<%= "won!" %>
+<% end %>

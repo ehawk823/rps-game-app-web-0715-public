@@ -2,7 +2,7 @@ require_relative 'config/environment'
 
 class GameApp < Sinatra::Base
   get '/rps/:play' do
-    # Your app code goes here
-    erb :rps_game
+    @game = RPSGame.new(params[:play].to_sym)
+      erb :rps_game
   end
 end
